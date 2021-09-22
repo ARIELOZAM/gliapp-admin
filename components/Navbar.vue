@@ -1,18 +1,29 @@
 <template>
     <div id="menu">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-                </div>
-            </div>
-        </nav>
+        <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-green border-bottom">
+                    <div class="container-fluid">
+                       <button class="btn btn-light" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto border-left border-light">
+                                <li class="nav-item active">
+                                    <div class="media">
+                                    <img src="https://via.placeholder.com/40" class="align-self-center mx-3 border-radius" alt="...">
+                                    <div class="media-body">
+                                        <a class="nav-link" href="#!">
+                                        <h6 class="mt-0">Nombre de usuario</h6>
+                                        <p><small>Pocision del Usuario</small></p>
+                                        
+                                        </a>
+                                    </div>
+                                    <i class="fas fa-sign-out-alt"></i>
+</div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
 </div>
 </template>
 
@@ -26,10 +37,15 @@ export default ({
 
 
 <style>
-.sidebar {
-    position: fixed;
-    height: 100vh;
-    border-right: 1px solid gray;
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.3);
+.navbar-green {
+    background-color: #4FB9BB;
+    color: white;
+}
+.navbar-green a {
+    color: white;
+}
+
+body a {
+    color: #4FB9BB;
 }
 </style>
