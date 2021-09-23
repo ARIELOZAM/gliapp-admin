@@ -14,12 +14,14 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css'},
-      { rel: 'stylesheet', href: 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'}
+      { rel: 'stylesheet', href: 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'},
+      { rel: 'stylesheet', href: '/css/app.css'}
     ],
     // JQuery
   script:[
     {src:'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'},
-    {src:'https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js'}
+    {src:'https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js'},
+    {src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'}
 ]
   },
 

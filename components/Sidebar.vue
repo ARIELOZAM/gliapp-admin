@@ -2,9 +2,9 @@
     <div id="sidebar">
         <!-- Sidebar-->
             <div class="border-right-0 bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light"><div class="text-center"><img src="/logo.png" class="img-fluid" alt="Logo Gli App"></div></div>
+                <div class="sidebar-heading border-bottom bg-light"><div class="text-center py-3"><img src="/logo.png" class="img-fluid" alt="Logo Gli App"></div></div>
                 <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="far fa-user"></i> Administradores</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="/administradores/"><i class="far fa-user"></i> Administradores</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="far fa-newspaper"></i> Catalogos</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fas fa-users"></i> Líderes</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><i class="fas fa-shopping-bag"></i> Usuarios</a>
@@ -21,39 +21,28 @@
 
 
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            
+        }
+    },
+    methods: {
+        toggleMenu() {
+            
+    // Toggle the side navigation
+    $('#sidebarToggle').click(function(){
+        $('body').toggleClass('sb-sidenav-toggled');
+    });
+
+        },
+    },
+
+    mounted() {
+        this.toggleMenu();
+    },
+}
 </script>
 <style>
-#sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  transition: margin 0.25s ease-out;
-}
 
-#sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.2rem;
-}
-
-#sidebar-wrapper .list-group {
-  width: 15rem;
-}
-body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-  margin-left: 0;
-}
-
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-    margin-left: -15rem;
-  }
-}
 </style>

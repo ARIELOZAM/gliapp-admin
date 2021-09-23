@@ -25,21 +25,36 @@
                         </template> 
                     </b-table>   
                     </div>
-
-                    <div id="admin-edit" class="esconder">
-            
-                    </div>
-
-                    <div id="admin-view" class="esconder">
-                        
-                    </div>
-
-                    <div id="admin-add" class="esconder">
-                        
-                    </div>             
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Eliminar Administrador</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>¿Estas Seguro de Eliminar a este admnistrador?</p>
+        <div class="media">
+  <img src="https://via.placeholder.com/64" class="rounded-circle mr-3" alt="...">
+  <div class="media-body">
+    <h5 class="mt-0">Gustavo Korsgaard</h5>
+    <p>correo@gmail.com</p>
+  </div>
+</div>
+      </div>
+      <div class="modal-footer mx-auto">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
 
     
@@ -67,7 +82,7 @@ export default {
             Área: 'Recursos Humanos',
             Correo: 'correo@gmail.com',
             Estatus: '<span class="badge badge-success">Activo</span>',
-            Detalles: '<a href="#!" class="editAdmin"><i class="far fa-edit"></i></span> <a href="#"><i class="far fa-trash-alt"></i></a> <a href="#"><i class="far fa-eye"></i></a>'
+            Detalles: '<a href="/administradores/edit"><i class="far fa-edit"></i></a>' + ' <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="far fa-trash-alt"></i></a>' + ' <a href="/administradores/view"><i class="far fa-eye"></i></a>'
           },
           {
             checkbox: '<input type="checkbox" aria-label="Checkbox for following text input">',
@@ -75,7 +90,7 @@ export default {
             Área: 'Recursos Humanos',
             Correo: 'correo@gmail.com',
             Estatus: '<span class="badge badge-success">Activo</span>',
-            Detalles: '<a href="#"><i class="far fa-edit"></i></a> <a href="#"><i class="far fa-trash-alt"></i></a> <a href="#"><i class="far fa-eye"></i></a>'
+            Detalles: '<a href="/administradores/edit"><i class="far fa-edit"></i></a>' + ' <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="far fa-trash-alt"></i></a>' + ' <a href="/administradores/view"><i class="far fa-eye"></i></a>'
             
           },
           {
@@ -84,7 +99,7 @@ export default {
             Área: 'Recursos Humanos',
             Correo: 'correo@gmail.com',
             Estatus: '<span class="badge badge-danger">Inactivo</span>',
-            Detalles: '<a href="#"><i class="far fa-edit"></i></a> <a href="#"><i class="far fa-trash-alt"></i></a> <a href="#"><i class="far fa-eye"></i></a>'
+            Detalles: '<a href="/administradores/edit"><i class="far fa-edit"></i></a>' + ' <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="far fa-trash-alt"></i></a>' + ' <a href="/administradores/view"><i class="far fa-eye"></i></a>'
           }
         ]
         
@@ -93,13 +108,7 @@ export default {
     },
 
     methods: {
-        toggleMenu() {
-            
-    // Toggle the side navigation
-    $('#sidebarToggle').click(function(){
-        $('body').toggleClass('sb-sidenav-toggled');
-    });
-        },
+        
 
         //Data tables
         dataTables() {
@@ -118,56 +127,16 @@ export default {
             } );
         },
 
-        editAdmin() {
-            var getEditBtn = document.querySelector(".editAdmin");
-            getEditBtn.addEventListener("click", function(){
-                $("#admin-list").toggleClass("esconder");
-                $("#admin-list").toggleClass("mostrar");
-                $("#admin-edit").toggleClass("mostrar");
-                $("#admin-edit").toggleClass("esconder");
-            });
-            
-        }
+        
     },
 
     mounted() {
-        this.toggleMenu();
+        //this.toggleMenu();
         this.dataTables();
-        this.editAdmin();
+        //this.editAdmin();
     }
 }
 </script>
 <style scoped>
-#wrapper {
-  overflow-x: hidden;
-}
 
-#page-content-wrapper {
-  min-width: 100vw;
-}
-
-body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-  margin-left: 0;
-}
-.esconder {
-    display: none;
-}
-
-.mostrar {
-    display: block;
-}
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
-
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
-    margin-left: -15rem;
-  }
-}
 </style>
