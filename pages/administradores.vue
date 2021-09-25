@@ -13,17 +13,17 @@
                     <b-table responsive :items="items" id="myTable">
                         <template #cell(Administradores)="data">
                             <span v-html="data.value"></span>
-                        </template> 
+                        </template>
                         <template #cell(Estatus)="data">
                             <span v-html="data.value"></span>
-                        </template>   
+                        </template>
                         <template #cell(Detalles)="data">
                             <span v-html="data.value"></span>
-                        </template>   
+                        </template>
                         <template #cell(checkbox)="data">
                             <span v-html="data.value"></span>
-                        </template> 
-                    </b-table>   
+                        </template>
+                    </b-table>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
 </div>
     </div>
 
-    
+
 </template>
 
 <script>
@@ -73,7 +73,7 @@ export default {
             text: 'Administradores',
             href: '#'
           },
-          
+
         ],
         items: [
           {
@@ -91,7 +91,7 @@ export default {
             Correo: 'correo@gmail.com',
             Estatus: '<span class="badge badge-success">Activo</span>',
             Detalles: '<a href="/administradores/edit"><i class="far fa-edit"></i></a>' + ' <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="far fa-trash-alt"></i></a>' + ' <a href="/administradores/view"><i class="far fa-eye"></i></a>'
-            
+
           },
           {
             checkbox: '<input type="checkbox" aria-label="Checkbox for following text input">',
@@ -102,41 +102,45 @@ export default {
             Detalles: '<a href="/administradores/edit"><i class="far fa-edit"></i></a>' + ' <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="far fa-trash-alt"></i></a>' + ' <a href="/administradores/view"><i class="far fa-eye"></i></a>'
           }
         ]
-        
+
     }
-    
+
     },
 
     methods: {
-        
-
         //Data tables
         dataTables() {
-           
+
             $(document).ready( function () {
-                $('#myTable').DataTable({  
+                $('#myTable').DataTable({
                     "language": {
                         "lengthMenu": "Mostrar _MENU_ por página",
                         "zeroRecords": "No hay resultados",
                         "info": "Pagina _PAGE_ de _PAGES_",
                         "infoEmpty": "No records available",
                         "infoFiltered": "(filtered from _MAX_ total records)"
-                    }      
+                    },
+                    buttons: [
+                        {
+                      text: 'My button',
+                      action: function ( e, dt, node, config ) {
+                          alert( 'Button activated' );
+                              }
+                          }
+                ]
                 });
 
             } );
         },
 
-        
+
     },
 
     mounted() {
-        //this.toggleMenu();
         this.dataTables();
-        //this.editAdmin();
     }
 }
 </script>
-<style scoped>
+<style>
 
 </style>

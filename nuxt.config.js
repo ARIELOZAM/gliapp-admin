@@ -21,7 +21,8 @@ export default {
   script:[
     {src:'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'},
     {src:'https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js'},
-    {src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'}
+    {src:'https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js'},
+    {src:'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'}
 ]
   },
 
@@ -33,7 +34,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-   
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
