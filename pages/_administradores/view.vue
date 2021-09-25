@@ -11,7 +11,7 @@
                       <div class="container-fluid">
                           <div class="row">
                               <div class="col-md-12">
-                                  <h3>Editar Administrador</h3>
+                                  <h3>Perfil del Administrador</h3>
 
                                   <div id="edit-admin">
                                       <div class="container">
