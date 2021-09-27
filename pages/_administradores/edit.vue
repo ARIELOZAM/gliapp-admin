@@ -32,12 +32,12 @@
 
                                         <div class="form-group">
                                             <label for="nameInput">Nombre (s)</label>
-                                            <input type="name" class="form-control" id="nameInput" aria-describedby="name" value="Juan">
+                                            <input type="text" class="form-control" id="nameInput" aria-describedby="name" value="Juan">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="lastnameInput">Apellido</label>
-                                            <input type="email" class="form-control" id="lastnameInput" aria-describedby="lastname" value="López">
+                                            <input type="text" class="form-control" id="lastnameInput" aria-describedby="lastname" value="López">
                                         </div>
 
                                         <div class="form-group">
