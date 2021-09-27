@@ -16,7 +16,7 @@
                                   <div id="edit-admin">
                                       <form action="/">
                                           <div class="card">
-                                        <img src="/img/profile.jpg" class="card-img-top" alt="...">
+                                        <img src="https://via.placeholder.com/128x80" class="card-img-top" alt="...">
                                         <div class="card-body">
                                             <h5 class="card-title"></h5>
                                             <p class="card-text">Arrastra tu archivo o</p>
@@ -32,31 +32,31 @@
 
                                         <div class="form-group">
                                             <label for="nameInput">Nombre (s)</label>
-                                            <input type="name" class="form-control" id="nameInput" aria-describedby="name" value="Juan">
+                                            <input type="name" class="form-control" id="nameInput" aria-describedby="name" placeholder="Nombre (s)">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="lastnameInput">Apellido</label>
-                                            <input type="email" class="form-control" id="lastnameInput" aria-describedby="lastname" value="López">
+                                            <input type="email" class="form-control" id="lastnameInput" aria-describedby="lastname" placeholder="Apellidos">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="emailInput">Correo</label>
-                                            <input type="email" class="form-control" id="emailInput" aria-describedby="email" value="correo@gmail.com">
+                                            <input type="email" class="form-control" id="emailInput" aria-describedby="email" placeholder="Correo eléctronico">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Área</label>
-                                            <b-form-select v-model="selected" :options="areas"></b-form-select>
+                                            <b-form-select v-model="area" :options="areas"></b-form-select>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="statusInput">Estatus</label>
-                                            <b-form-select v-model="selected" :options="status"></b-form-select>
+                                            <b-form-select v-model="estatus" :options="status"></b-form-select>
                                         </div>
 
                                         <button type="button" @click="goBack()" class="btn btn-outline-primary">Cancelar</button>
-                                        <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                                        <button type="submit" class="btn btn-success">Agregar Administrador</button>
                                       </form>
                                   </div>
                               </div>
@@ -82,22 +82,22 @@ export default {
             href: '/administradores'
           },
           {
-            text: 'Editar',
+            text: 'Añadir',
             href: '#'
           },
 
         ],
-        selected: 1,
+        area: null,
         areas: [
-            {value: null, text: "Selecciona una opción"},
+            {value: null, text: "Tipo de Área"},
             {value: "1", text: "Recursos Humanos"},
             {value: "2", text: "Logistica"},
             {value: "3", text: "Cobranza"},
             {value: "4", text: "Ventas"}
         ],
-        selected: 1,
+        estatus: null,
         status: [
-            {value: null, text: "Selecciona una opción"},
+            {value: null, text: "Estatus"},
             {value: "1", text: "Activo"},
             {value: "2", text: "Inactivo"},
             {value: "3", text: "Pendiente"}

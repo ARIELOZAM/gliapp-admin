@@ -1,45 +1,71 @@
 #wrapper {
     overflow-x: hidden;
   }
-  
+
   #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
     transition: margin 0.25s ease-out;
   }
-  
+
   #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
   }
-  
+
   #sidebar-wrapper .list-group {
     width: 15rem;
   }
-  
+
   #page-content-wrapper {
     min-width: 100vw;
   }
-  
+
   body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: 0;
   }
-  
+
   @media (min-width: 768px) {
     #sidebar-wrapper {
       margin-left: 0;
     }
-  
+
     #page-content-wrapper {
       min-width: 0;
       width: 100%;
     }
-  
+
     body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
       margin-left: -15rem;
     }
   }
+  /* icon colors */
+  .far, .fas {
+    color: #4FB9BB;
+    padding: 0px 3px;
+  }
+  .fa-edit {color: #4FB9BB;}
+  .fa-trash-alt {color: #EB5757;}
+  .fa-eye {color: #323232;}
 
+  /* Estatus Badges */
+  table.dataTable tbody td:nth-child(4) {
+    text-align: center;
+  }
+  .badge {
+    border-radius: 0px !important;
+    text-transform: uppercase;
+    font-size: 12px !important;
+  }
+  .badge-success {
+    color: #4CAF50 !important;
+    background-color: #E8F5E9 !important;
+  }
+
+  .badge-danger {
+    color: #EB5757 !important;
+    background-color: #FFE1E0 !important;
+  }
   /* Breadcrums Styles */
   .breadcrumb {
         background-color: transparent !important;
@@ -50,8 +76,6 @@
     float: left;
     padding-right: 0.5rem;
     color: #6c757d;
-    
-    
     }
 
   /* Style Input File */
@@ -85,4 +109,12 @@
   .inputDnD .form-control-file:hover:before {
     border-style: solid;
     box-shadow: inset 0px 0px 0px 0.25em currentColor;
+  }
+#sidebarToggle {
+  display: none;
+}
+  @media screen and (max-width: 720px) {
+    #sidebarToggle {
+      display: block;
+    }
   }

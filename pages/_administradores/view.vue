@@ -18,9 +18,56 @@
                                         <div class="row">
                                           <div class="col-md-6">
                                             <img src="https://via.placeholder.com/64" alt="" class="img-fluid rounded-circle">
-                                            <h5>Nombre Apellido</h5>
+                                            <h5>Cheyenne Korsgaard</h5>
                                           </div>
                                         </div>
+                                        <div class="row pb-2">
+                                          <div class="col-md-4">
+                                            <span class="text-muted">
+                                              Nombre
+                                            </span>
+                                            <br>
+                                            <span><strong>Cheyenne</strong></span>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <span class="text-muted">
+                                              Apellido
+                                            </span>
+                                            <br>
+                                            <span><strong>Korsgaard</strong></span>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <span class="text-muted">
+                                              Correo Electronico
+                                            </span>
+                                            <br>
+                                            <span><strong>correo@gmail.com</strong></span>
+                                          </div>
+                                        </div>
+
+                                        <div class="row pt-2">
+                                          <div class="col-md-4">
+                                            <span class="text-muted">
+                                              Área
+                                            </span>
+                                            <br>
+                                            <span><strong>
+                                              Recursos Humanos
+                                            </strong></span>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <span class="text-muted">
+                                              Estatus
+                                            </span>
+                                            <br>
+                                            <span><strong>Activo</strong></span>
+                                          </div>
+                                          <div class="col-md-4">
+
+                                          </div>
+                                        </div>
+                                        <hr>
+                                        <a href="./edit" class="btn btn-secondary">Editar información</a>
                                       </div>
                                   </div>
                               </div>
