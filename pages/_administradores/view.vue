@@ -67,7 +67,7 @@
                                           </div>
                                         </div>
                                         <hr>
-                                        <a href="./edit" class="btn btn-secondary">Editar información</a>
+                                        <a href="/administradores/edit" class="btn btn-secondary">Editar información</a>
                                       </div>
                                   </div>
                               </div>
